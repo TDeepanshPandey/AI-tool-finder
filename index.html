@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Tool Finder</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="container">
+        <p class="badge">Discover. Compare. Build faster.</p>
+        <h1>Find the right AI tool for every task</h1>
+        <p class="hero-copy">
+          Explore top AI tools across writing, coding, image generation, productivity,
+          research, and video workflows.
+        </p>
+        <a class="cta" href="#tools">Browse tools</a>
+      </div>
+    </header>
+
+    <main id="tools" class="container">
+      <section class="controls" aria-label="Tool filters">
+        <div class="control-group">
+          <label for="search">Search tools</label>
+          <input
+            id="search"
+            type="search"
+            placeholder="Search by name, category, or description"
+          />
+        </div>
+
+        <div class="control-group">
+          <label for="category">Filter by category</label>
+          <select id="category">
+            <option value="All">All categories</option>
+            <option value="Writing">Writing</option>
+            <option value="Coding">Coding</option>
+            <option value="Image Generation">Image Generation</option>
+            <option value="Productivity">Productivity</option>
+            <option value="Research">Research</option>
+            <option value="Video">Video</option>
+          </select>
+        </div>
+      </section>
+
+      <section>
+        <h2>Featured AI tools</h2>
+        <p id="resultCount" class="result-count"></p>
+        <div id="toolList" class="tool-grid" aria-live="polite"></div>
+      </section>
+    </main>
+
+    <footer class="container footer">
+      <p>AI Tool Finder · Static site ready for GitHub Pages</p>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
