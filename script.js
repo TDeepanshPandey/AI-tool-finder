@@ -31,17 +31,25 @@ function renderTools() {
 
   resultCount.textContent = `${filtered.length} tool${filtered.length === 1 ? "" : "s"} found`;
 
-  toolList.innerHTML = filtered
-    .map(
-      (tool) => `
-        <article class="tool-card">
-          <h3>${tool.name}</h3>
-          <p>${tool.description}</p>
-          <span class="tag">${tool.category}</span>
-        </article>
-      `
-    )
-    .join("");
+  toolList.textContent = "";
+
+  filtered.forEach((tool) => {
+    const card = document.createElement("article");
+    card.className = "tool-card";
+
+    const title = document.createElement("h3");
+    title.textContent = tool.name;
+
+    const description = document.createElement("p");
+    description.textContent = tool.description;
+
+    const tag = document.createElement("span");
+    tag.className = "tag";
+    tag.textContent = tool.category;
+
+    card.append(title, description, tag);
+    toolList.appendChild(card);
+  });
 }
 
 searchInput.addEventListener("input", renderTools);

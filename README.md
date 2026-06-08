@@ -14,7 +14,7 @@ AI Tool Finder is a static, responsive landing page for discovering useful AI to
 
 No build step is needed.
 
-- Open `/tmp/workspace/TDeepanshPandey/AI-tool-finder/index.html` directly in a browser, or
+- Open `index.html` directly in a browser, or
 - Serve the repository with any static file server.
 
 ## GitHub Pages deployment
