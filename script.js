@@ -31,7 +31,7 @@ function renderTools() {
 
   resultCount.textContent = `${filtered.length} tool${filtered.length === 1 ? "" : "s"} found`;
 
-  toolList.textContent = "";
+  toolList.replaceChildren();
 
   filtered.forEach((tool) => {
     const card = document.createElement("article");
